@@ -11,13 +11,6 @@ io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
   });
-  //
-  socket.on('streamFromClient', function (dataImg) {
-      //console.log('streamFromClient');
-      //Send to all clients
-      io.emit('streamFromServer', dataImg);
-      //console.log('streamFromServer');
-  });
 });
 
 http.listen(port, function(){
